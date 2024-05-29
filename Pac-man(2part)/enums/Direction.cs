@@ -8,6 +8,7 @@ namespace Pac_man_2part_.enums
 {
     public enum Direction
     {
+        None,
         Left,
         Right,
         Up,

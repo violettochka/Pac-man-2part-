@@ -34,19 +34,17 @@
             imageList = new ImageList(components);
             timer = new System.Windows.Forms.Timer(components);
             imagePacmanDir = new ImageList(components);
-            LabelScore = new Label();
             ((System.ComponentModel.ISupportInitialize)picGameBoard).BeginInit();
             SuspendLayout();
             // 
             // picGameBoard
             // 
-            picGameBoard.BackColor = SystemColors.Window;
+            picGameBoard.BackColor = SystemColors.WindowText;
             picGameBoard.Location = new Point(12, 12);
             picGameBoard.Name = "picGameBoard";
-            picGameBoard.Size = new Size(1056, 672);
+            picGameBoard.Size = new Size(1296, 960);
             picGameBoard.TabIndex = 0;
             picGameBoard.TabStop = false;
-            picGameBoard.Click += picGameBoard_Click;
             // 
             // imageList
             // 
@@ -56,13 +54,13 @@
             imageList.Images.SetKeyName(0, "coin.png");
             imageList.Images.SetKeyName(1, "ghost.png");
             imageList.Images.SetKeyName(2, "helper.png");
-            imageList.Images.SetKeyName(3, "wall.png");
+            imageList.Images.SetKeyName(3, "2672702_wall_object_essential_app_ux_icon.png");
             // 
             // timer
             // 
             timer.Enabled = true;
             timer.Interval = 250;
-            timer.Tick += TimerTick;
+            timer.Tick += timer_Tick;
             // 
             // imagePacmanDir
             // 
@@ -74,21 +72,12 @@
             imagePacmanDir.Images.SetKeyName(2, "pacman-blue(up).png");
             imagePacmanDir.Images.SetKeyName(3, "pacman-blue(right).png");
             // 
-            // LabelScore
-            // 
-            LabelScore.AutoSize = true;
-            LabelScore.Location = new Point(83, 51);
-            LabelScore.Name = "LabelScore";
-            LabelScore.Size = new Size(50, 20);
-            LabelScore.TabIndex = 1;
-            LabelScore.Text = "label1";
-            // 
             // frmPacMan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1086, 710);
-            Controls.Add(LabelScore);
+            BackColor = SystemColors.WindowText;
+            ClientSize = new Size(1162, 823);
             Controls.Add(picGameBoard);
             Name = "frmPacMan";
             Text = "form1";
@@ -96,7 +85,6 @@
             KeyDown += PacmanKeyDown;
             ((System.ComponentModel.ISupportInitialize)picGameBoard).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -105,6 +93,5 @@
         private ImageList imageList;
         private System.Windows.Forms.Timer timer;
         private ImageList imagePacmanDir;
-        private Label LabelScore;
     }
 }
