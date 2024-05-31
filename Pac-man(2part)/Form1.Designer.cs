@@ -33,7 +33,9 @@
             picGameBoard = new PictureBox();
             imageList = new ImageList(components);
             timer = new System.Windows.Forms.Timer(components);
-            imagePacmanDir = new ImageList(components);
+            imagePacmanDirBlue = new ImageList(components);
+            imagePacmanDirPink = new ImageList(components);
+            imagePacmanDirWhite = new ImageList(components);
             ((System.ComponentModel.ISupportInitialize)picGameBoard).BeginInit();
             SuspendLayout();
             // 
@@ -62,15 +64,35 @@
             timer.Interval = 250;
             timer.Tick += timer_Tick;
             // 
-            // imagePacmanDir
+            // imagePacmanDirBlue
             // 
-            imagePacmanDir.ColorDepth = ColorDepth.Depth32Bit;
-            imagePacmanDir.ImageStream = (ImageListStreamer)resources.GetObject("imagePacmanDir.ImageStream");
-            imagePacmanDir.TransparentColor = Color.Transparent;
-            imagePacmanDir.Images.SetKeyName(0, "pacman-blue(down).png");
-            imagePacmanDir.Images.SetKeyName(1, "pacman-blue(left).png");
-            imagePacmanDir.Images.SetKeyName(2, "pacman-blue(up).png");
-            imagePacmanDir.Images.SetKeyName(3, "pacman-blue(right).png");
+            imagePacmanDirBlue.ColorDepth = ColorDepth.Depth32Bit;
+            imagePacmanDirBlue.ImageStream = (ImageListStreamer)resources.GetObject("imagePacmanDirBlue.ImageStream");
+            imagePacmanDirBlue.TransparentColor = Color.Transparent;
+            imagePacmanDirBlue.Images.SetKeyName(0, "pacman-blue(down).png");
+            imagePacmanDirBlue.Images.SetKeyName(1, "pacman-blue(left).png");
+            imagePacmanDirBlue.Images.SetKeyName(2, "pacman-blue(up).png");
+            imagePacmanDirBlue.Images.SetKeyName(3, "pacman-blue(right).png");
+            // 
+            // imagePacmanDirPink
+            // 
+            imagePacmanDirPink.ColorDepth = ColorDepth.Depth32Bit;
+            imagePacmanDirPink.ImageStream = (ImageListStreamer)resources.GetObject("imagePacmanDirPink.ImageStream");
+            imagePacmanDirPink.TransparentColor = Color.Transparent;
+            imagePacmanDirPink.Images.SetKeyName(0, "pacman-purpleUp(3).png");
+            imagePacmanDirPink.Images.SetKeyName(1, "pacman-purpleUp94).png");
+            imagePacmanDirPink.Images.SetKeyName(2, "pacman-purple.png");
+            imagePacmanDirPink.Images.SetKeyName(3, "pacman-purpleUp.png");
+            // 
+            // imagePacmanDirWhite
+            // 
+            imagePacmanDirWhite.ColorDepth = ColorDepth.Depth32Bit;
+            imagePacmanDirWhite.ImageStream = (ImageListStreamer)resources.GetObject("imagePacmanDirWhite.ImageStream");
+            imagePacmanDirWhite.TransparentColor = Color.Transparent;
+            imagePacmanDirWhite.Images.SetKeyName(0, "(3).png");
+            imagePacmanDirWhite.Images.SetKeyName(1, "381603_pacman_icon.png");
+            imagePacmanDirWhite.Images.SetKeyName(2, "(4]).png");
+            imagePacmanDirWhite.Images.SetKeyName(3, "381603_pacman_icon(2).png");
             // 
             // frmPacMan
             // 
@@ -92,6 +114,8 @@
         private PictureBox picGameBoard;
         private ImageList imageList;
         private System.Windows.Forms.Timer timer;
-        private ImageList imagePacmanDir;
+        private ImageList imagePacmanDirBlue;
+        private ImageList imagePacmanDirPink;
+        private ImageList imagePacmanDirWhite;
     }
 }

@@ -13,6 +13,7 @@ namespace Pac_man_2part_.models
     public class Pacman : MovebleEntity
     {
         public int Score { get; set; }
+        public static ImageList ImagePacmanDir;
         public Pacman(int x, int y) : base(x, y)
         {
             Score = 0;
@@ -33,7 +34,6 @@ namespace Pac_man_2part_.models
         }
 
         public void DrawImageDir(Pacman pacman,
-                                   ImageList imagePacmanDir,
                                    Graphics g)
         {
 
@@ -46,7 +46,7 @@ namespace Pac_man_2part_.models
                 _ => 3
             };
 
-            pacman.Draw(pacman.X, pacman.Y, g, imagePacmanDir, imageIndex);
+            pacman.Draw(pacman.X, pacman.Y, g, ImagePacmanDir, imageIndex);
         }
 
         public void PacmanIsKilling(BaseEntity[,] field, int x, int y)
