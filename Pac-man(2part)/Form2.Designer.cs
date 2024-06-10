@@ -38,6 +38,7 @@
             ColorWhite = new Button();
             ColorPink = new Button();
             StartGame = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // NameOfTheGame
@@ -143,7 +144,7 @@
             // StartGame
             // 
             StartGame.Font = new Font("Stencil", 20F);
-            StartGame.Location = new Point(301, 323);
+            StartGame.Location = new Point(427, 318);
             StartGame.Name = "StartGame";
             StartGame.Size = new Size(234, 87);
             StartGame.TabIndex = 9;
@@ -151,12 +152,24 @@
             StartGame.UseVisualStyleBackColor = true;
             StartGame.Click += StartGame_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Stencil", 20F);
+            button1.Location = new Point(165, 318);
+            button1.Name = "button1";
+            button1.Size = new Size(234, 87);
+            button1.TabIndex = 10;
+            button1.Text = "Help";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += HelpFormClick;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuText;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(StartGame);
             Controls.Add(ColorPink);
             Controls.Add(ColorWhite);
@@ -185,5 +198,6 @@
         private Button ColorWhite;
         private Button ColorPink;
         private Button StartGame;
+        private Button button1;
     }
 }

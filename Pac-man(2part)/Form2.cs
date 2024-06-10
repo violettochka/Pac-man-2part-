@@ -74,5 +74,13 @@ namespace Pac_man_2part_
                 MessageBox.Show("Please select both level and color before confirming.");
             }
         }
+
+        private void HelpFormClick(object sender, EventArgs e)
+        {
+            using (Form3 helpingForm = new Form3())
+            {
+                helpingForm.ShowDialog();
+            }
+        }
     }
 }
